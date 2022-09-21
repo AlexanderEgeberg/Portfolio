@@ -6,10 +6,21 @@ const Home: NextPage = () => {
   return (
     <>
       <section
-        style={{backgroundImage: `url(https://www.kindacode.com/wp-content/uploads/2022/05/orange-background.jpeg)`}}
-        className='flex justify-center py-44 bg-fixed bg-center bg-repeat bg-cover'
+        style={{backgroundImage: `url('/images/background.jpg')`}}
+        className='flex items-center flex-col justify-center h-screen bg-fixed bg-center bg-repeat bg-cover'
       >
-        <figure>
+
+        <div className='text-center'>
+          <h1 className='font-medium leading-tight text-5xl mb-2 text-blue-600'>
+          Designer, Frontend Developer & Mentor
+          </h1>
+
+          <h2 className='font-thin leading-tight text-3xl mb-2 text-blue-600'>
+          I design and code beautifully simple things, and I love what I do.
+          </h2>
+        </div>
+
+        <figure className=''>
           <Image
             className='rounded-full'
             src='/images/profile.png'
@@ -18,13 +29,10 @@ const Home: NextPage = () => {
             alt='Alexander profile picture'
           />
 
-          <h2 className='flex justify-center text-zinc-300'>
-          Alexander
-          </h2>
         </figure>
       </section>
 
-      <section className='flex justify-center pt-96 bg-gray-700'>
+      <section className='flex justify-center pt-96'>
         testhelo wtf?
 
       </section>
