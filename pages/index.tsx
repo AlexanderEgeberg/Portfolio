@@ -1,49 +1,23 @@
-import Image from 'next/image'
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
-
   return (
-    <>
-      <section
-        style={{backgroundImage: `url('/images/background.jpg')`}}
-        className='flex items-center flex-col justify-center h-screen bg-fixed bg-center bg-repeat bg-cover'
-      >
+    <ul>
+      <li>
+        <Link href='/post/abc'>Go to pages/post/[pid].js</Link>
+      </li>
 
-        <div className='text-center'>
-          <h1 className='font-medium leading-tight text-5xl mb-2 text-blue-600'>
-          Designer, Frontend Developer & Mentor
-          </h1>
+      <li>
+        <Link href='/post/abc?foo=bar'>Also goes to pages/post/[pid].js</Link>
+      </li>
 
-          <h2 className='font-thin leading-tight text-3xl mb-2 text-blue-600'>
-          I design and code beautifully simple things, and I love what I do.
-          </h2>
-        </div>
-
-        <figure className=''>
-          <Image
-            className='rounded-full'
-            src='/images/profile.png'
-            height={200}
-            width={200}
-            alt='Alexander profile picture'
-          />
-
-        </figure>
-      </section>
-
-      <section className='flex justify-center pt-96'>
-        testhelo wtf?
-
-      </section>
-
-      <section className='flex justify-center pt-96'>
-        testhelo wtf?
-
-      </section>
-
-    </>
-  )
-}
-
-export default Home
+      <li>
+        <Link href='/post/abc/a-comment'>
+          Go to pages/post/[pid]/[comment].js
+        </Link>
+      </li>
+    </ul>
+  );
+};
+export default Home;
